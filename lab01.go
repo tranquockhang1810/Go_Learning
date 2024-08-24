@@ -171,24 +171,18 @@ func mergeArrays(arr1 []int, arr2 []int) []int {
 
 //LEETCODE
 func lengthOfLongestSubstring(s string) int {
-	result := 0
-	stringSplit := strings.Split(s, "")
-	tempString := ""
-	for _, value := range stringSplit {
-		if strings.Contains(tempString, value) {
-			// Get max count
-			if len(tempString) > result {
-				result = len(tempString)
-			}
-			// Get exist substring index
-			index := strings.Index(tempString, value)
-			// Remove exist substring in tempString
-			tempString = tempString[index+1:]
+	var res int
+	sub := make([]string, 0, 0)
+	for _, char := range s {
+		if !strings.Contains(strings.Join(sub, ""), string(char)) {
+			sub = append(sub, string(char))
+			res = max(res, len(sub))
+		} else {
+			cut := strings.Index(strings.Join(sub, ""), string(char))
+			sub = append(sub[cut+1:], string(char))
 		}
-		tempString += value
 	}
-
-	return result
+	return res
 }
 
 func isValid(s string) bool {
