@@ -7,32 +7,32 @@ import (
 
 func main() {
 	// fmt.Println("=====String=====")
-	// fmt.Printf("1. Đảo ngược chuỗi '%s': %s \n", "Hello World", preservedString("Hello World"))
-	// fmt.Printf("2. Đếm số lần xuất hiện của một ký tự '%s' trong chuỗi '%s': %d \n", "l", "hello", countAppearancesCharacter("hello", "l"))
-	// fmt.Printf("3. Kiểm tra chuỗi đối xứng của '%s': %t \n", "madam", checkPalindrome("madam"))
-	// fmt.Printf("4. Loại bỏ khoảng trắng trong chuỗi '%s': %s \n", "hello  world", removeSpace("hello world"))
-	// fmt.Printf("5. Tìm chuỗi con '%s' trong chuỗi '%s': %t \n", "ell", "hello", isSubstring("hello", "ell"))
+	fmt.Printf("1. Đảo ngược chuỗi '%s': %s \n", "Hello World", preservedString("Hello World"))
+	fmt.Printf("2. Đếm số lần xuất hiện của một ký tự '%s' trong chuỗi '%s': %d \n", "l", "hello", countAppearancesCharacter("hello", "l"))
+	fmt.Printf("3. Kiểm tra chuỗi đối xứng của '%s': %t \n", "madam", checkPalindrome("madam"))
+	fmt.Printf("4. Loại bỏ khoảng trắng trong chuỗi '%s': %s \n", "hello  world", removeSpace("hello world"))
+	fmt.Printf("5. Tìm chuỗi con '%s' trong chuỗi '%s': %t \n", "ell", "hello", isSubstring("hello", "ell"))
 
 	// fmt.Println("=====Numbers=====")
-	// fmt.Printf("1. Kiểm tra số nguyên tố của %d: %t \n", 7, isPrime(7))
-	// fmt.Printf("2. Tính giai thừa của %d: %d \n", 5, factorial(5))
-	// fmt.Printf("3. Tìm số Fibonacci thứ %d: %d \n", 7, fibonacci(7))
-	// fmt.Printf("4. Kiểm tra số hoàn hảo của %d: %t \n", 6, isPerfectNumber(6))
-	// fmt.Printf("5. Tính tổng các chữ số của %d: %d \n", 123, sumOfDigits(123))
+	fmt.Printf("1. Kiểm tra số nguyên tố của %d: %t \n", 7, isPrime(7))
+	fmt.Printf("2. Tính giai thừa của %d: %d \n", 5, factorial(5))
+	fmt.Printf("3. Tìm số Fibonacci thứ %d: %d \n", 7, fibonacci(7))
+	fmt.Printf("4. Kiểm tra số hoàn hảo của %d: %t \n", 6, isPerfectNumber(6))
+	fmt.Printf("5. Tính tổng các chữ số của %d: %d \n", 123, sumOfDigits(123))
 
 	// fmt.Println("=====Array=====")
-	// arr := []int{3, 5, 7, 2, 8}
-	// max, min := findMaxMin(arr)
-	// fmt.Printf("1. Giá trị lớn nhất và nhỏ nhất trong mảng %v: max = %d, min = %d \n", arr, max, min)
-	// fmt.Printf("2. Sắp xếp mảng %v theo thứ tự tăng dần: %v \n", arr, sortArray(arr))
-	// fmt.Printf("3. Số lần xuất hiện của phần tử %d trong mảng %v: %d \n", 2, []int{1, 2, 3, 2, 2, 4}, countOccurrences([]int{1, 2, 3, 2, 2, 4}, 2))
-	// fmt.Printf("4. Xóa phần tử %d khỏi mảng %v: %v \n", 2, []int{1, 2, 3, 4}, removeElement([]int{1, 2, 3, 4}, 2))
-	// fmt.Printf("5. Gộp hai mảng %v và %v: %v \n", []int{1, 2}, []int{3, 4}, mergeArrays([]int{1, 2}, []int{3, 4}))
+	arr := []int{3, 5, 7, 2, 8}
+	max, min := findMaxMin(arr)
+	fmt.Printf("1. Giá trị lớn nhất và nhỏ nhất trong mảng %v: max = %d, min = %d \n", arr, max, min)
+	fmt.Printf("2. Sắp xếp mảng %v theo thứ tự tăng dần: %v \n", arr, sortArray(arr))
+	fmt.Printf("3. Số lần xuất hiện của phần tử %d trong mảng %v: %d \n", 2, []int{1, 2, 3, 2, 2, 4}, countOccurrences([]int{1, 2, 3, 2, 2, 4}, 2))
+	fmt.Printf("4. Xóa phần tử %d khỏi mảng %v: %v \n", 2, []int{1, 2, 3, 4}, removeElement([]int{1, 2, 3, 4}, 2))
+	fmt.Printf("5. Gộp hai mảng %v và %v: %v \n", []int{1, 2}, []int{3, 4}, mergeArrays([]int{1, 2}, []int{3, 4}))
 
 	fmt.Println("=====LeetCode=====")
-	// fmt.Println(lengthOfLongestSubstring("abcabcbb"))
-	// fmt.Println(isValid("(]"))
-	//fmt.Println(romanToInt("IV"))
+	fmt.Println(lengthOfLongestSubstring("abcabcbb"))
+	fmt.Println(isValid("(]"))
+	fmt.Println(romanToInt("IV"))
 	fmt.Println(intToRoman(16))
 }
 
