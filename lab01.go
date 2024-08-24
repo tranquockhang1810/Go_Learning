@@ -31,7 +31,9 @@ func main() {
 
 	fmt.Println("=====LeetCode=====")
 	// fmt.Println(lengthOfLongestSubstring("abcabcbb"))
-	fmt.Println(isValid("(]"))
+	// fmt.Println(isValid("(]"))
+	//fmt.Println(romanToInt("IV"))
+	fmt.Println(intToRoman(16))
 }
 
 //STRINGS
@@ -190,7 +192,7 @@ func lengthOfLongestSubstring(s string) int {
 }
 
 func isValid(s string) bool {
-	if len(s)%2 != 0 {
+	if len(s) == 0 || len(s)%2 != 0 {
 		return false
 	}
 	
@@ -213,4 +215,43 @@ func isValid(s string) bool {
 	}
 
 	return len(stack) == 0
+}
+
+func romanToInt(s string) int {
+	romanTable := map[uint8]int{
+		'I': 1,
+		'V': 5,
+		'X': 10,
+		'L': 50,
+		'C': 100,
+		'D': 500,
+		'M': 1000,
+	}
+	var result, lastValue, currentValue int
+	for i := len(s) - 1; i >= 0; i-- {
+		currentValue = romanTable[s[i]]
+		if currentValue < lastValue {
+			result -= currentValue
+		} else {
+			result += currentValue
+		}
+		lastValue = currentValue
+	}
+
+	return result
+}
+
+func intToRoman(num int) string {
+    values := []int{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}
+		symbols := []string{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}
+
+		var result string
+
+		for i := 0; i < len(values); i++ {
+			for num > 0 && num >= values[i] {
+				result += symbols[i]
+				num -= values[i]
+			}
+		}
+		return result
 }
